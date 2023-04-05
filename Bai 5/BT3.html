@@ -3,43 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        th {
+            background: cadetblue;
+        }
+        tr:nth-child(odd) {
+            background: cadetblue;
+        }
+    </style>
 </head>
 <body>
-<table>
   <h3>Market Research Survey</h3>
  Please take a few moments to complete thí satisfaction survey. <br><br>
-  What is your yearly income range?<br>
-  <select>
+  <b>What is your yearly income range?</b><br>
+  <select style="width: 200px">
         <option value="">18-24</option>
         <option value="">25-34</option>
         <option value="">35-50</option>
         <option value="">50+</option>
   </select><br>
-  What is your yearly income range?<br>
-  <select>
+  <b>What is your yearly income range?</b><br>
+  <select style="width: 200px">
     <option value="">$0 - $25,000</option>
     <option value="">$25,000 - $50,000</option>
     <option value="">$50,000 - $100,000</option>
     <option value="">$100,000+</option>
   </select><br>
-  Gender Identity <br>
-<input type="radio" name="Male" value="Male">Male<br>
-  <input type="radio" name="Female" value="Female">Female<br>
-  <input type="radio" name="Nonbinary" value="Nonbinary">Nonbinary<br>
-  <input type="radio" name="Other" value="Other">Other<br>
+  <b>Gender Identity</b> <br>
+<input type="radio" name="gt">Male<br>
+  <input type="radio" name="gt">Female<br>
+  <input type="radio" name="gt">Nonbinary<br>
+  <input type="radio" name="gt">Other<br>
   <input type="text" name="name"><br>
-  Which of the following products have your purchased in the last 2 months. Please check all that apply.<br>
+  <b>Which of the following products have your purchased in the last 2 months. Please check all that apply.</b><br>
   <input type="checkbox" name="product">Product 1<br>
   <input type="checkbox" name="product">Product 2<br>
-  <input type="checkbox" name="product">Product 3
+  <input type="checkbox" name="product">Product 3<br>
+  <b>How often would you use our new product?</b> <br>
+  <input type="radio" name="use">Daily<br>
+  <input type="radio" name="use">Weekly<br>
+  <input type="radio" name="use">Monthly<br>
   <br>
-  How often would you use our new product? <br>
-  <input type="radio" name="daily" value="Daily">Daily<br>
-  <input type="radio" name="weekly" value="Weekly">Weekly<br>
-  <input type="radio" name="Monthly" value="Monthly">Monthly<br>
-  <br>
-  What would you pay for the new product? <br>
-  $<input>
+  <b>What would you pay for the new product?</b> <br>
+  $<input type="text" style="width: 100px">.<input type="text" style="width: 20px">
+    <br>
+    <b>What features would you like to see in the new product.</b><br>
+    <textarea cols="80" rows="5">
+    </textarea><br>
+  <b>Please rate your level of agreement with the following statements.</b> <br>
+<table>
+    <tr>
+        <th colspan="2"></th>
+        <th>Strongly Disagree</th>
+        <th>Disagree</th>
+        <th>Agree</th>
+        <th>Strongly Agree</th>
+    </tr>
+    <tr>
+        <td colspan="2">Our products are priced fairly.</td>
+        <td  style="text-align: center"><input type="radio" name="use"><br>1</td>
+        <td  style="text-align: center"><input type="radio" name="use"><br>2</td>
+        <td  style="text-align: center"><input type="radio" name="use"><br>3</td>
+        <td  style="text-align: center"><input type="radio" name="use"><br>4</td>
+    </tr>
+    <tr>
+        <td colspan="2">Our products are high fairly.</td>
+        <td  style="text-align: center"><input type="radio" name="use"><br>1</td>
+        <td  style="text-align: center"><input type="radio" name="use"><br>2</td>
+        <td  style="text-align: center"><input type="radio" name="use"><br>3</td>
+        <td  style="text-align: center"><input type="radio" name="use"><br>4</td>
+    </tr>
+    <tr>
+        <td colspan="2">You would recommend our product to a friend or coworker.</td>
+        <td  style="text-align: center"><input type="radio" name="use"><br>1</td>
+        <td  style="text-align: center"><input type="radio" name="use"><br>2</td>
+        <td  style="text-align: center"><input type="radio" name="use"><br>3</td>
+        <td  style="text-align: center"><input type="radio" name="use"><br>4</td>
+    </tr>
 </table>
 </body>
 </html>

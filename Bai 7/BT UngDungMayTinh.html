@@ -1,10 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<table>
+<tr>
+    <td colspan="2"><input type="number" id="Sothunhat"></td>
+    <td colspan="2"><input type="number" id="Sothuhai"></td>
+</tr>
+    <tr>
+        <td><button type="button" id="Cong" onclick="Plus();">Addition(+)</button></td>
+        <td><button type="button" id="Tru" onclick="Sub();">Subtraction(-)</button></td>
+        <td><button type="button" id="Nhan" onclick="Multi();">Multiplication(x)</button></td>
+        <td><button type="button" id="Chia" onclick="Divi();">Division(/)</button></td>
+    </tr>
+</table>
+<br>
+<br>
+<br>
+<p id="KetQua"></p>
 </body>
 </html>
+<script>
+    function Plus() {
+        let sothunhat = document.getElementById("Sothunhat").value;
+        let sothuhai = document.getElementById("Sothuhai").value;
+        let Ketqua;
+        Ketqua = Number(sothunhat) + Number(sothuhai);
+        document.getElementById("KetQua").innerHTML = "Kết Quả Là: " + Ketqua;
+    }
+
+    function Sub() {
+        let sothunhat = document.getElementById("Sothunhat").value;
+        let sothuhai = document.getElementById("Sothuhai").value;
+        let Ketqua;
+        Ketqua = Number(sothunhat) - Number(sothuhai);
+        document.getElementById("KetQua").innerHTML = "Kết Quả Là: " + Ketqua;
+    }
+
+    function Multi() {
+        let sothunhat = document.getElementById("Sothunhat").value;
+        let sothuhai = document.getElementById("Sothuhai").value;
+        let Ketqua;
+        Ketqua = Number(sothunhat) * Number(sothuhai);
+        document.getElementById("KetQua").innerHTML = "Kết Quả Là: " + Ketqua;
+    }
+
+    function Divi() {
+        let sothunhat = document.getElementById("Sothunhat").value;
+        let sothuhai = document.getElementById("Sothuhai").value;
+        let Ketqua;
+        Ketqua = Number(sothunhat) / Number(sothuhai);
+        document.getElementById("KetQua").innerHTML = "Kết Quả Là: " + Ketqua;
+    }
+</script>
