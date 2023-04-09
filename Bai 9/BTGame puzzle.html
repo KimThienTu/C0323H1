@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzle</title>
+</head>
+<body>
+<img onclick="doi_anh()" id="img" src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/339285100_961298084876116_2614412438452082210_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=PsZ_g1OEsa4AX-MibuC&_nc_ht=scontent.fhan17-1.fna&oh=00_AfAbcRivTySPnpuwli2xs98YWR7tNcRWSOOIttxMLgTU9Q&oe=6433A7D1" width="200px">
+</body>
+</html>
+<script>
+  const anh1 = "https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/340014187_930933068094647_7593046921414565240_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=jhGlJ5QoKUkAX-HsT0D&_nc_ht=scontent.fhan17-1.fna&oh=00_AfAIgIH3FWVDrM27qeNLL6JTPh0KcjCDwh-QZYZpGQSgBA&oe=6434B566";
+  const anh2 = "https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/340016519_757656632729553_571117240436183013_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=Xa9Dx3GjCcUAX9mhLHn&_nc_ht=scontent.fhan17-1.fna&oh=00_AfAayNtZPw6QDtqmwbfwctPgRn-M-Ihv4ilU929R6OhkVA&oe=64351081";
+  const anh3 = "https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/340133400_171399812455343_5454900148018576120_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=eK5FSuQMmF8AX8JaBbi&_nc_ht=scontent.fhan17-1.fna&oh=00_AfBHPwIfjJZoaEq_2CIXwZRVPZyZM82pTYzZbbDlxbU4hA&oe=64351DE1";
+  const anh4 = "https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/340005330_2466264793525062_6421967662700879580_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=92Cl6VDSd34AX8rQNpK&_nc_ht=scontent.fhan17-1.fna&oh=00_AfA45eLHZFEji5qEGEkpO4-9nzpAlV643vqBjfpdFgY_Bg&oe=64354976";
+  const anh5 = "https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/338965974_932525537903008_2677510640125290706_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=bKBNuqXwOUwAX-TGkgK&_nc_ht=scontent.fhan17-1.fna&oh=00_AfAExGoCYxLAyXPpcxoJUT0C2eGAqx-9x8BP73gcLA0Acw&oe=643495F8";
+
+  function doi_anh() {
+    let img = document.getElementById("img");
+    let src = img.src;
+
+    if (src === anh1) {
+      img.src = anh2;
+    } else if (src === anh2) {
+      img.src = anh3;
+    } else if (src === anh3) {
+      img.src = anh4;
+    } else if (src === anh4) {
+      img.src = anh5;
+    } else {
+      img.src = anh1;
+    }
+  }
+</script>

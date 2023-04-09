@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  // // Bài 1: Chuyển từ độ C sang độ F.
+  // let doC = +prompt("Nhập độ C");
+  // let doF;
+  // function chuyen_doi() {
+  //   doF = ((9 * doC) / 5) + 32;
+  //   alert("Độ F là: " + doF);
+  // }
+  // document.getElementById(chuyen_doi()).innerHTML = "Độ F là: " + chuyen_doi();
+
+
+  // // Bài 2: Chuyển từ mét sang feet.
+  // let m = +prompt("Nhập số mét");
+  // let ft;
+  // function chuyenDoi() {
+  //   ft = m * 3.2808;
+  //   alert("Số Feet là: " + ft);
+  // }
+  // document.getElementById(chuyenDoi()).innerHTML = "So Feet là: " + chuyenDoi();
+
+
+  // // Bài 3: Tính diện tích hình vuông khi biết cạnh a.
+  // let a = +prompt("Nhập độ dài cạnh a");
+  // let S;
+  // function dientich() {
+  //   S = a * a;
+  //   alert("Diện tích hình vuông là: " + S);
+  // }
+  // document.getElementById(dientich()).innerHTML = "Diện tích hình vuồn là; " + dientich();
+
+
+  // //Bài 4: Tính diện tích hình chữ nhật khi biết 2 cạnh a,b.
+  // let a = +prompt("Nhập cạnh a");
+  // let b = +prompt("Nhập cạnh b");
+  // let S;
+  // function dientich() {
+  //     S = a * b;
+  //     alert("Diện tích hình chữ nhật là: " + S);
+  // }
+  // document.getElementById(dientich()).innerHTML = "Diện tích hình chữ Nhật là: " + dientich();
+
+
+  // // Bài 5: Tính diện tích tam giác vuông khi biết 2 cạnh a,b.
+  // let a = +prompt("Nhập cạnh a");
+  // let h = +prompt("Nhập cạnh h");
+  // let S;
+  // function dientich() {
+  //     S = (a * h) / 2;
+  //     alert("Diện tích tam giác vuông là: " + S);
+  // }
+  // document.getElementById(dientich()).innerHTML = "Diện tích tam giác vuông là: " + dientich();
+
+  // //Bài 6: Giải phương trình bậc 1.
+  // let a = +prompt("Nhập a");
+  // let b = +prompt("Nhập b");
+  // if (a === 0 && b === 0) {
+  //     alert("Phương trình vô số nghiệm");
+  // } else if (a === 0 && b != 0) {
+  //     alert("Phương trình vô nghiệm");
+  // } else if (a != 0 && b === 0){
+  //     alert("Phương trình có nghiệm x = 0");
+  // } else {
+  //     alert("Phương trình có nghiệm là -b/a")
+  // }
+
+
+  // //Bài 7: Giải phương trình bậc 2.
+  // let a = +prompt("Nhập a");
+  // let b = +prompt("Nhập b");
+  // let c = +prompt("Nhập c");
+  // let delta = ((b * b) - (4 * a * c));
+  // if (delta === 0) {
+  //     alert("Phương trình có nghiệm kép là : x1,x2 = -b/(2*a)");
+  // } else if (delta < 0) {
+  //     alert("Phương trình vô nghiệm");
+  // } else {
+  //     alert("Phương trình có hai nghiệm")
+  // }
+
+  // /* Bài 8: Kiểm tra xem 1 số nhập vào có phải là tuổi của 1 người không.
+  // Một số nguyên là tuổi của 1 người khi nhỏ hơn 120 và lớn hơn 0
+  //  */
+  // let a = +prompt("Nhập số tuổi");
+  // if (a < 120 && a > 0) {
+  //     alert("Số tuổi của bạn là: " + a);
+  // } else {
+  //     alert("Đây không phải là số tuổi của con người");
+  // }
+
+  // /* Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của 1 tam giác.
+  // Điều kiện để a,b,c là cạnh của một tam giác là:
+  // a,b,c > 0;
+  // a + b > c;
+  // b + c > a;
+  // a + c > b;
+  //  */
+  // let a = +prompt("Nhập số a");
+  // let b = +prompt("Nhập số b");
+  // let c = +prompt("Nhập số c");
+  // if (a > 0 && b > 0 && c > 0) {
+  //     if ( a + b > c) {
+  //         alert("3 cạnh là hình tam giác")
+  //     } else if ( b + c > a) {
+  //         alert("3 cạnh là hình tam giác")
+  //     } else if (a + c > b) {
+  //         alert("3 cạnh là hình tam giác")
+  //     } else {
+  //         alert("Không phải là 3 cạnh  hình tam giác")
+  //     }
+  // }
+
+  // //Bài 10: Viết chương trình tính giá điện.
+  // let soDien = +prompt("Nhập số điện");
+  // let bac1 = 1678; // Từ 0 đến 50kWh
+  // let bac2 = 1734; // Từ 51 đến 100kWh
+  // let bac3 = 2014; // Từ 101 đến 200kWh
+  // let bac4 = 2536; // Từ 201 đến 300kWh
+  // let bac5 = 2834; // Từ 301 đến 400kWh
+  // let bac6 = 2927; // Từ 401 kWh trở lên
+  // let tiendien;
+  // if (soDien <= 50) {
+  //     tiendien = soDien * bac1;
+  //     alert("Số tiền điện là: " + tiendien);
+  // } else if (soDien <= 100) {
+  //     tiendien = soDien * bac2;
+  //     alert("Số tiền điện là: " + tiendien);
+  // } else if (soDien <= 200) {
+  //     tiendien = soDien * bac3;
+  //     alert("Số tiền điện là: " + tiendien);
+  // } else if (soDien <= 300) {
+  //     tiendien = soDien * bac4;
+  //     alert("Số tiền điện là: " + tiendien);
+  // } else if (soDien <= 400) {
+  //     tiendien = soDien * bac5;
+  //     alert("Số tiền điện là: " + tiendien);
+  // } else if (soDien > 400) {
+  //     tiendien = soDien * bac6;
+  //     alert("Số tiền điện là: " + tiendien);
+  // } else {
+  //     alert("Bạn đã nhập sai. Hãy nhập lại");
+  // }
+
+
+  // //Bài 11: Viết chương trình tính thuế thu nhập cá nhân.
+  // let a = +prompt("Nhập tiền lương");
+  // let bac1 = 5000000;   // 5%
+  // let bac2 = 10000000;  // 10%
+  // let bac3 = 15000000;  // 15%
+  // let bac4 = 30000000;  // 20%
+  // let bac5 = 50000000;  // 25%
+  // let bac6 = 80000000;  // 30%
+  // let thue;
+  // if (a >= bac1 && a < bac2) {
+  //     thue = bac1 * 5 /100;
+  //     alert("Số thuế bạn phải nộp là: " + thue);
+  // } else if (a >= bac2 && a < bac3) {
+  //     thue = bac2 * 10 /100;
+  //     alert("Số thuế bạn phải nộp là: " + thue);
+  // } else if (a >= bac3 && a < bac4) {
+  //     thue = bac3 * 15 /100;
+  //     alert("Số thuế bạn phải nộp là: " + thue);
+  // } else if (a >= bac4 && a < bac5) {
+  //     thue = bac4 * 20 /100;
+  //     alert("Số thuế bạn phải nộp là: " + thue);
+  // } else if (a >= bac5 && a < bac6) {
+  //     thue = bac5 * 25 /100;
+  //     alert("Số thuế bạn phải nộp là: " + thue);
+  // } else if (a >= bac6) {
+  //     thue = bac6 * 30 /100;
+  //     alert("Số thuế bạn phải nộp là: " + thue);
+  // } else {
+  //     alert("Bạn không phải nộp thuế")
+  // }
+
+  /*Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết
+  số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.
+   */
+  let a = +prompt("Nhập số tiền vay");
+  let b = a/12;
+  let c = (a * 12 / 100) / 12;
+  let d = ((a - b) * 12 / 100) / 12;
+  alert("Số tiền gốc phải trả hàng tháng la: " + b);
+  alert("Số tiền lãi phải trả tháng đầu là: " + c);
+  alert("Số tiền lãi phải trả tháng thứ 2 là: " + d);
+
+</script>

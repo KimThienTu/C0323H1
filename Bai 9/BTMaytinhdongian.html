@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <style>
+        td {
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+  <input type="text" id="number"><br>
+<table>
+    <tr>
+        <td><button type="button" value="1" onclick="input_data(this.value)">1</button></td>
+        <td><button type="button" value="2" onclick="input_data(this.value)">2</button></td>
+        <td><button type="button" value="3" onclick="input_data(this.value)">3</button></td>
+        <td><button type="button" value="+" onclick="input_data(this.value)">+</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" value="4" onclick="input_data(this.value)">4</button></td>
+        <td><button type="button" value="5" onclick="input_data(this.value)">5</button></td>
+        <td><button type="button" value="6" onclick="input_data(this.value)">6</button></td>
+        <td><button type="button" value="-" onclick="input_data(this.value)">-</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" value="7" onclick="input_data(this.value)">7</button></td>
+        <td><button type="button" value="8" onclick="input_data(this.value)">8</button></td>
+        <td><button type="button" value="9" onclick="input_data(this.value)">9</button></td>
+        <td><button type="button" value="*" onclick="input_data(this.value)">*</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" value="C" onclick="Clear();">C</button></td>
+        <td><button type="button" value="0" onclick="input_data(this.value)">0</button></td>
+        <td><button type="button" value="=" onclick="ket_qua();">=</button></td>
+        <td><button type="button" value="/" onclick="input_data(this.value)">/</button></td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+    let display = document.getElementById("number");
+    function input_data(value) {
+        number.value += value;
+    }
+
+    function ket_qua() {
+        let ketqua = eval(number.value)
+        number.value = ketqua;
+    }
+
+    function Clear() {
+        document.getElementById("number").value = '';
+    }
+</script>

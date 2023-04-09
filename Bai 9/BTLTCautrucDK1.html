@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01</title>
+</head>
+<body>
+<!--<span>Hoa hồng = 10% doanh số</span>-->
+<!--<span></span>-->
+<!--<input type="number" id="number" value="doanhso"/><br>-->
+<!--<input type="button" onclick="tinhtoan();" value="Kết quả"/><br>-->
+<!--<p id="ketqua">Hoa hồng của bạn</p>-->
+</body>
+</html>
+
+<script>
+    // // Bài 1: Nhập vào 2 số a va b, kiểm tra xem a có chia hết cho b ko?
+    // let a = +prompt("Nhập số a");
+    // let b = +prompt("Nhập số b");
+    // if (a % b === 0) {
+    //     alert("a chia hết cho b")
+    // } else {
+    //     alert("a không chia hết cho b")
+    // }
+
+    // // Bài 2: Nhập tuổi và in ra kết quả nếu học sinh đó không đủ tuổi vào lớp 10.
+    // let a = +prompt("Nhập số tuổi");
+    // if (a >= 15) {
+    //     alert("Đủ tuổi vào lớp 10");
+    // } else {
+    //     alert("Không đủ tuổi vào lớp 10");
+    // }
+
+    // // Bài 3: Nhập 1 số nguyên bất kì và in kết quả ra màn hình để nói cho người
+    // // dùng biết số đó là lớn hay nhỏ hơn 0.
+    // let a = +prompt("Nhập số bất kì");
+    // if (a > 0) {
+    //     document.write("Đây là số lớn hơn 0");
+    // } else if (a === 0) {
+    //     document.write("Đây là số 0");
+    // } else {
+    //     document.write("Đây là số âm")
+    // }
+
+    // // Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của 3 số nguyên đó.
+    // let a = 50, b = 100, c = 150;
+    // if (a > b) {
+    //     if (a > c) {
+    //         alert("a là số lớn nhất");
+    //     } else {
+    //         alert("c là số lớn nhất");
+    //     }
+    // } else if (a < b) {
+    //     if (b > c) {
+    //         alert("b là số lớn nhất");
+    //     } else {
+    //         alert("c là số lớn nhất")
+    //     }
+    // }
+
+    // // Bài 5: Xếp hạng học lực của học sinh dựa trên điểm các bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ.
+    // let a = +prompt("Nhập điểm kiểm tra");
+    // let b = +prompt("Nhập điểm thi giữa kì");
+    // let c = +prompt("Nhập điểm thi cuối kì");
+    // let hocluc = (a + b + c)/3;
+    // if (hocluc >= 8.5) {
+    //     alert("Đây là học sinh giỏi");
+    // } else if (hocluc >= 6.5) {
+    //     alert("Đây là học sinh khá");
+    // } else if (hocluc >= 5) {
+    //     alert("Đây là học sinh TB");
+    // } else {
+    //     alert("Đây là học sinh yếu")
+    // }
+
+    // // Bài 6: Tính hoa hồng nhận được tùy theo mức doanh số bán hàng.
+    // function tinhtoan() {
+    //     let a = +document.getElementById("number").value;
+    //     let b = (10 * a) / 100;
+    //     document.getElementById("ketqua").innerHTML = "Hoa hồng của bạn là: " + b;
+    // }
+
+    // Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho.
+    let phut_goi = +prompt("Nhập số phút gọi");
+    let phiCoDinh = 35000;
+    let tien1phutgoi = 800;
+    let cuochangthang = 0;
+
+    function cuocDienThoai () {
+        let cuochangthang = (phut_goi * tien1phutgoi) + phiCoDinh;
+        alert("Tiền cước hàng tháng là: " + cuochangthang);
+    }
+    document.getElementById(cuocDienThoai()).innerHTML = "Tiền cước hàng tháng là: " + cuocDienThoai();
+</script>
