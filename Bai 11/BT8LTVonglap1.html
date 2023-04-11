@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="game()">CHƠI</button>
+</body>
+</html>
+<script>
+    function random(min, max) {
+        return (parseInt(Math.random() * (max + 1 - min) + min));
+    }
+
+    function game() {
+        let between = prompt("Nhập khoảng muốn đoán (cấu trúc start - end): ");
+        between.replace(" ", "");
+        let start = parseInt(between.slice(0, between.indexOf("-")));
+        let end = parseInt(between.slice(between.indexOf("-") + 1, between.length));
+        let numRand = random(start, end);
+        let numChosen = parseInt(prompt("Chọn số của bạn:"));
+        let ktra = false;
+        let countWrong = 0;
+        while ((ktra === false) && (countWrong < 3)) {
+            ktra = false;
+            if (numChosen === numRand) {
+                alert("Chúc mừng! Bạn đã chiến thắng");
+                ktra = true;
+            } else {
+                countWrong++;
+                if (countWrong < 3) {
+                    if (numChosen > numRand) numChosen = parseInt(prompt("Sai ròi, đoán số nhỏ hơn đê!"));
+                    else numChosen = parseInt(prompt("Sai ròi, đoán số lớn hơn đê!"));
+                } else alert("Bạn thua ròi!");
+
+            }
+        }
+    }
+</script>

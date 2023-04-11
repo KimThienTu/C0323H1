@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //Bài 1: Sử dụng vòng lặp để đếm tuef 1 đến 100. Khi số là 99,
+  // hiển thị hộp thoại thông báo là đã hoàn thành.
+  let i;
+  for (let i = 1; i <= 100; i++) {
+    if (i === 99) {
+     document.write("Hoàn thành");
+    }
+    document.write(i + "<br>");
+  }
+
+  //Bài 2:Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập.
+  // Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ.
+  // Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
+  let nhietDo = +prompt("Nhập nhiệt độ");
+  if (nhietDo < 20) {
+    alert("Bạn hãy tăng nhiệt độ lên");
+  } else if (nhietDo > 100) {
+    alert("Bạn hãy giảm nhiệt độ");
+  }
+
+  //Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
+  //Cách 1:
+  let n1 = 0;
+  let n2 = 1;
+  let n;
+  document.write(n1 + "<br>");
+  document.write(n2 + "<br>");
+  for (let i = 3; i <= 20; i++) {
+      n = n1 + n2;
+      document.write(n + "<br>");
+      n1 = n2;
+      n2 = n;
+  }
+
+  //Cách 2:
+  let x1 = 1;
+  let x2 = 1;
+  let text = "20 số đầu tiên của dãy fibonacci là ; " + x1 + ", " + x2;
+  for (let i =3; i <= 20; i++) {
+      text += ", " + (x1 + x2);
+      x2 = x1 + x2;
+      x1 = x2 - x1;
+  }
+  document.write(text);
+
+
+  //Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
+  let x1 = 1;
+  let x2 = 1;
+  while (true) {
+      x2 = x1 + x2;
+      x1 = x2 - x1;
+      if (x2 % 5 === 0) break;
+  }
+  document.write("Số đầu tiên trong dãy fibonacci chia hết cho 5 là : " + x2);
+
+  //Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+  let n1 = 0;
+  let n2 = 1;
+  let sum = 0;
+  let n;
+  for (let i = 0; i <= 20; i++) {
+      n = n1 + n2;
+      document.write(n1 + "<br>");
+      sum += n;
+      n1 = n2;
+      n2 = n;
+  }
+  document.write("Tổng của 20 dãy số trên là: " + sum);
+
+  //Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.
+  //Cách 1:
+  let n = 1;
+  let sum = 0;
+  let count = 0;
+  while (count < 30) {
+      if (n % 7 === 0) {
+          sum += n;
+          count++;
+          document.write(count + "   " + n + "<br>");
+      }
+      n++;
+  }
+  document.write("Tổng 30 STN đầu tiên chia hết cho 7 là: " + sum + "<br>");
+
+  //Cách 2:
+  let count = 0, tong =0
+  let dayso =""
+  for (let i= 1; ; i++){
+      if(i % 7 === 0){
+          dayso += i+" "
+          console.log(dayso)
+          tong += i
+          count++
+          if(count === 30) break
+      }
+  }
+  document.write(dayso+"<br>")
+  document.write("Tổng bằng "+tong)
+
+
+  //Bài 7: Hãy viết 1 chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz",
+  // 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chứ "FizzBuzz".
+  for (let i = 1; i <= 100; i++) {
+      if ( i % 15 === 0) {
+          document.write(i + "FizzBuzz" + "<br>")
+      } else if (i % 5 === 0) {
+          document.write(i + "Buzz" + "<br>")
+      } else if (i % 3 === 0) {
+          document.write(i + "Bizz" + "<br>")
+      } else {
+          document.write(i + "<br>")
+      }
+  }
+  document.write(i + "<br>")
+
+</script>
+</body>
+</html>

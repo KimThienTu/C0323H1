@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // Viết chương trình tính tổng, tích từ 1 đến n.(n nhập từ bàn phím)
+  let num = +prompt("Enter your number");
+  let tong = 0;
+  let tich = 1;
+  for (let i = 1; i <= num; i +=1) {
+      tong += i;
+      tich *= i;
+  }
+  document.write(tong + "<br>");
+  document.write(tich);
+</script>
+</body>
+</html>

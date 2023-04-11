@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //Bài 1: In dãy Fibonaci.
+  let n  = +prompt("Nhập n");
+  document.write(n + "số đầu tiên trong dãy là: <br>")
+  let a = 1;
+  let b = 1;
+  document.write(a + ", " + x2)
+  for (let i = 3; i < n; i++) {
+          b = a + b;
+          a = b - a;
+          document.write(", " + b);
+  }
+
+
+  //Bai 2: Tính giai thừa của một số nguyên dương.
+  let x = +prompt("Nhập 1 số nguyên dương");
+  let i;
+  let factorial = x;
+  for (i = 1; i < x; i++) {
+      factorial *= (x - i);
+  }
+  alert('x! =' + factorial)
+
+
+  //Bài 3: In tam giác vuông. Các góc vuông nằm ở vị trí khác nhau.
+  let i;
+  let j;
+
+  for (i = 0; i <= 5 ; i++) {
+      for (j = 0; j <= i; j++) {
+          document.write('*')
+      }
+      document.write('<br>');
+  }
+  document.write('<br>');
+
+  for (i = 0; i <= 5; i++) {
+      for (j = 5; j >= i; j--) {
+          document.write('*')
+      }
+      document.write('<br>');
+  }
+  document.write('<br>');
+
+  document.write("<div style='width: 50px' align='right'>");
+  for (i = 0; i <= 5; i++) {
+      for (j = 0; j <= i; j++) {
+          document.write('*')
+      }
+      document.write('<br>');
+  }
+  document.write('<br>');
+
+  document.write("<div style='width: 50px' align='right'>");
+  for (i <= 5; i >= 0; i--) {
+      for (j = 0; j < i; j++) {
+          document.write('*');
+      }
+      document.write('<br>');
+  }
+
+
+  //Bài 4: In hình chữ Nhật.
+  let i;
+  let j;
+  let n = 7;
+  let m = 21;
+  for (i = 0; i < n; i++){
+      for (j = 0; j < m; j++) {
+          if (i ==0 || i == n-1 || j == 0 || j == m-1){
+              document.write('*')
+          } else {
+              document.write('&nbsp ')
+          }
+      }
+      document.write('<br>')
+  }
+
+
+  //Bài 5: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu,
+  // số tháng cho vay và lãi xuất hàng tháng.
+  let P = +prompt("Nhập số tền ban đầu: ");
+  let n = +prompt("Nhập số tháng cho vay: ");
+  let r = +prompt("Nhập lãi suất hàng tháng (dưới dạng phần trăm): ");
+  let lai = 0;
+  for (let i = 1; i <= n; i++) {
+      lai += P * i *r / 100;
+      P += P * i *r / 100;
+  }
+  document.write("Số tiền cả gốc lẫn lãi phải trả là: " + lai);
+
+
+  //Bài 6: In hình trái tim.
+  let x = 6;
+  let x2 = 1;
+  for (let i = 1; i <= 3; i++) {
+      for (let j = 1; j <= 11; j++) {
+          if ((j === (x - (i + 2))) || (j === (x - (3 - i))) || (j === (x + (3 - i))) || (j === (x + (i + 2)))) {
+              document.write("&nbsp*&nbsp");
+          } else document.write("&nbsp &nbsp");
+      }
+      document.write("<br>");
+  }
+  for (let i = 1; i <= 6; i++) {
+      for (let j = 1; j <= 11; j++) {
+          if ((j === i) || (j === (11 - (i - 1)))) {
+              document.write("&nbsp*&nbsp");
+          } else document.write("&nbsp &nbsp");
+      }
+      document.write("<br>");
+  }
+</script>
+</body>
+</html>

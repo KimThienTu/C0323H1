@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //cấu trúc while
+  //lặp đi lặp lại thân vòng while
+  // khi mà điều kiện trong while còn đúng
+  let count = 0
+  while (count++ <= 10) {
+    count++
+  }
+  console.log(count)
+
+
+  //cấu trúc do while
+  //lặp đi lặp lại thân của phần do
+  // khi mà điều kiện trong while còn đúng
+  //nếu điều kiện của while sai, do sẽ thực hiện 1 lần duy nhất (lần đầu)
+  let count1 = 0
+  do {
+    count1++
+  } while (count1++ <= 10)
+  console.log(count1)
+
+
+  //cấu trúc for (for i)
+  //let i = 0: là phần khởi tạo bước lặp
+  //i < 10: là điều kiện để vòng lặp chạy và kết thúc
+  //i++: phần tăng trưởng bước lặp
+  //trong ngoặc nhọn là thân vòng lặp
+  //lưu ý:
+  //biến i là biến thường dùng, kp mặc định
+  //điều kiện chạy k nhất thiết là < 1 số nào đó
+  //i++ có thể là i = i + 2, i = i + 3; tùy theo bài toán
+  for (let i = 0; i < 10; i++) {
+    // console.log(i)
+  }
+
+
+  //for thiếu
+  let a = 0
+  for (; a < 10;) {
+    a++
+    // console.log(a)
+  }
+
+
+  //từ khóa continue và break
+  //continue: bỏ qua phần còn lại của vòng lặp trong lần lặp này
+  //nhảy sang bước lặp tiếp theo
+  //break: kết thúc vóng lặp gần nhất với nó
+  let i = 0
+  for (; i < 5; i++) {
+    if (i === 3) {
+      continue
+    }
+    console.log("Kết quả:" + i)
+  }
+  console.log(i)
+
+
+let j = 0
+  for (; j < 5; j++) {
+    if (j === 3) {
+      break
+    }
+    console.log("Kết quả:" + j)
+  }
+  console.log(j)
+</script>
+</body>
+</html>
