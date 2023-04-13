@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<label for="string">Nhập Từ</label>
+<input type="text" nam="" id="string">
+<button onclick="transcript()">Dịch</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+  function transcript() {
+    let a = ["banana","apple","pen","book","orange"];
+    let b = ["Chuối","Táo","Bút","Sách","Cam"];
+    let string = document.getElementById("string").value;
+    let index = 0;
+    let result = "";
+    for (let i = 0; i < a.length; i++) {
+      if (string === a[i]) {
+        index = i;
+        for (let j = 0; j < b.length; j++) {
+          if (index === j) {
+            result = b[j];
+          }
+        }
+      }
+    }
+    document.getElementById("result").innerHTML = result;
+  }
+</script>

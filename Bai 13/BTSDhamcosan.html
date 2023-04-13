@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+<script>
+  // //Bài 1: Viết một chương trình Javascript để nối tất cả các phần tử trong một mảng chuỗi lại với nhau.
+  // myColor = ["Red", "Green", "White", "Black"];
+  // console.log(myColor.toString());  // Red,Green,White,Black
+  // console.log(myColor.join());      // Red,Green,Whire,Black
+  // console.log(myColor.join('+'));   // Red+Green+White+Black
+
+
+  //Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn.
+  const num = window.prompt();
+  const str = num.toString();
+  const result = [str[0]];
+
+  for (let x = 1; x < str.length; x++){
+      if ((str[x-1] % 2 === 0) && (str[x] % 2 === 0)){
+          result.push('-', str[x]);
+      } else {
+          result.push(str[x]);
+      }
+  }
+  document.write(result.join(''));
+
+
+  //Bài 3:Viết một chương trình nhập vào một chuỗi và chuyển các ký tự
+  // chữ thường trong chuỗi vừa nhập sang thành dạng chữ hoa.
+  let str = 'c';
+  let UPPER = 'ABCDEFGHIKMLPQ';
+  let LOWER = 'abcdefghikmlpq';
+  let result = [];
+  for (var x = 0; x < str.length; x++) {
+      if (UPPER.indexOf(str[x]) !== 1){
+          result.push(str[x].toLowerCase());
+      } else if (LOWER.indexOf(str[x]) !==1){
+          result.push(str[x].toUpperCase());
+      } else {
+          result.push(str[x]);
+      }
+  }
+  document.write(result.join(''));
+</script>
+</body>
+</html>
