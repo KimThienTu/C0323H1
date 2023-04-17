@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+  //Bài 1: Viết hàm thêm 1 phần tử vào vị trí bất kì cu mảng.
+  //VD: Thêm số 5 vào vị trí 2.
+  let arr = [6,2,7,4,5];
+  function add (index,element){
+    for (let i = arr.length; i > index; i--){
+      arr[i] = arr[i-1];
+    }
+    arr[index] = element;
+  }
+  add (2,5);
+
+
+  //Bài 2: Kiểm tra xem 5 có phải là SNT ko, nếu có thì thông báo, con ko thì -5.
+  //Kiểm tra xem 15 có phải là SNT ko, nếu có thì thông báo, con ko thì % 5.
+  //Kiểm tra xem 30 có phải là SNT ko, nếu có thì thông báo, con ko thì + 20.
+  function kiemTraSNT (a){
+    let check = true;
+    for (let i = 2; i < a; i++){
+      if (a % i === 0){
+        check = false;
+        break;
+      }
+    }
+    return check;
+  }
+  let checkSNT = kiemTraSNT(a);
+
+  if (!kiemTraSNT(5)){
+    alert(5 -5 );
+  }
+
+  if (!kiemTraSNT(15)){
+    alert(15 % 5);
+  }
+
+  if (!kiemTraSNT(30)){
+    alert(30 + 20);
+  }
+</script>

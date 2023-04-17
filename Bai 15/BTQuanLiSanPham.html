@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+    <style>
+        td {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<h1>Add New Product</h1>
+<br>
+<input placeholder="New Product" id="name">
+<input placeholder="Nhập giá" id="gia">
+<input placeholder="Hình ảnh" id="hinhanh">
+<button onclick="themSP()">Add</button>
+<h2>Display All Product</h2>
+<br>
+<h3>Product Name</h3>
+<table id="display">
+
+</table>
+</body>
+</html>
+<script>
+    let arr = [
+        ["Sony Xperia", 7000000, "https://cdn.tgdd.vn/Products/Images/42/195747/sony-xperia-1-600x600.jpg"],
+        ["Samsung Galaxy", 12000000, "https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/s/a/samsung-galaxy-a33-5g-500x500.jpg"],
+        ["Nokia 6", 6000000, "https://cdn.tgdd.vn/Products/Images/42/90836/nokia-6-15-300x300.jpg"],
+        ["Xiaomi Redmi Note 4", 11500000, "https://bachlongmobile.com/media/catalog/product/x/i/xiaomi-redmi-note-4-1.jpg"],
+        ["Apple iPhone 6S",4500000 ,"https://cdn.tgdd.vn/Products/Images/42/71306/iphone-6s-vang-hong-org-1.png"],
+        ["Xiaomi Mi 5s Plus",1500000 ,"https://cdn.tgdd.vn/Products/Images/42/87356/xiaomi-mi-5s-plus-300x300.jpg"],
+        ["Apple iPhone 8 Plus",4000000 ,"https://cdn.tgdd.vn/Products/Images/42/114110/iphone-8-plus-hh-600x600-600x600.jpg"],
+        ["Fujitsu F-04E",1000000 ,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9kodQY7rx0HxWKY7fjaCLMGuEryWlYyejPiXdK1cSaajxeOptrkMOQPSSHmCfEkNpfys&usqp=CAU"],
+        ["Oppo A71",2500000 ,"https://p-vn.ipricegroup.com/uploaded_44f92d74dd402b7ea4a00e62f0c53e9b.jpg"]
+    ];
+    quanLySP();
+    function quanLySP(){
+        let str = "";
+        for (let i = 0; i < arr.length; i++){
+            str += "<tr>" +
+                "<td>" + arr[i][0] + "</td>" +
+                "<td>" + arr[i][1] + "</td>" +
+                "<td><img src='" + arr[i][2] + "' width='150' height='200'></td>" +
+                "<td><button onclick='edit("+ i +")'>Edit</button></td>" +
+                "<td><button onclick='xoa("+ i +")'>Delete</button></td>" +
+                "</tr>"
+        }
+        document.getElementById("display").innerHTML = str;
+    }
+
+    function themSP(){
+        let name = document.getElementById("name").value;
+        let gia = document.getElementById("gia").value;
+        let img = document.getElementById("hinhanh").value;
+        let arr2 = [name,gia,img];
+        arr.push(arr2);
+        console.log(arr);
+        quanLySP();
+    }
+    function xoa(index){
+        arr.splice(index,1);
+        quanLySP();
+    }
+</script>

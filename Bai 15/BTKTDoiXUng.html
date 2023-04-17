@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+  console.log(isPalindrome("hrcecrh"));
+  console.log(isPalindrome("lloll"));
+  console.log(isPalindrome("pleee"));
+  console.log(isPalindrome("thanks"));
+  function isPalindrome(str){
+    if (str.length <= 1){
+      return true;
+    }
+    if (str[0] !== str[str.length-1]){
+      return false;
+    }
+    return isPalindrome(str.substring(1, str.length-1));
+  }
+  document.write(isPalindrome(str));
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 01</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+ //Bài 3: Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai,
+ // hiển thị hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai,
+ // trả về tổng của hai tham số.
+ let a = +prompt("Nhập a");
+ let b = +prompt("Nhập b");
+ function testHaiThamSo(a,b){
+     let resual = 0;
+     if (a > b){
+         return alert(a + " Lớn hơn " + b);
+     } else if (a <= b){
+         resual = a + b;
+         return alert("Tổng của 2 tham số là: " + resual);
+     }
+     return resual;
+ }
+ testHaiThamSo(a,b);
+
+
+
+ //Bài 4: Thêm các hàm alert() vào những vị trí thích hợp trong đoạn mã sau để bạn có thể
+ // nhìn thấy giá trị của biến result trước và sau lời gọi hàm.
+ function addNumber(){
+     firstNum = 4;
+     secondNum = 8;
+     result = firstNum + secondNum;
+     return result;
+ }
+ result = 0;
+ alert(result + "Chưa có gì xảy ra");
+ result = addNumber();
+ alert(result + "Kết quả khi gọi hàm");
+
+
+ //Bài 5: Tạo một mảng với bảy phần tử dạng chuỗi có giá trị là tên các ngôi sao sau:
+ // Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus. Tạo một mảng khác với bảy phần tử
+ // dạng chuỗi có giá trị là tên các chòm sao tương ứng chứa các ngôi sao:
+ // Ursa Minor, Tarurus, Cygnus, Lyra, Aquila, Ursa Major và Leo. Tiếp theo,
+ // tạo một hàm nhận vào một tham số dạng chuỗi duy nhất. Trong hàm này,
+ // duyệt qua mảng thứ nhất để tìm tên ngôi sao. Nếu tìm thấy,
+ // trả lại giá trị tương ứng với chỉ số đó ở mảng thứ hai.
+ let arr = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+ let arr1 = ["Ursa","Tarurus","Cygus","Lyra","Aquila","Ursa Major","Leo"];
+ function nextString(star){
+     let index = 0;
+     let result = "";
+     for (let i = 0; i < arr.length; i++){
+         if (arr[i] === star){
+             for (let j = 0; j < arr1.length; j++){
+                 if (j === i){
+                     result = arr1[j];
+                     return result;
+                 }
+             }
+         }
+     }
+     return document.write("Không có sao");
+ }
+ let star = prompt("Nhập vào ngôi sao: ");
+ document.write(nextString(star));
+</script>

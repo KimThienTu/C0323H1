@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  // //Bài 1: Viết hàm tính bình phương của một số bất kì được đưa vào. Gọi hàm vừa xây dựng.
+  // let number = +prompt("Nhập số");
+  // function tinhBinhPhuong (number){
+  //   let result = number * number;
+  //   return result;
+  // }
+  // tinhBinhPhuong(number);
+  // document.write(tinhBinhPhuong(number));
+
+
+  // //Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được.
+  // let ban_kinh = +prompt("Nhập bán kính");
+  // function dienTich(ban_kinh){
+  //   let S = ban_kinh * ban_kinh * 3.14;
+  //   return S;
+  // }
+  // document.write(dienTich(ban_kinh));
+  //
+  // function chuVi(ban_kinh){
+  //   let C = 2 * ban_kinh * 3.14;
+  //   return C;
+  // }
+  // document.write(dienTich(ban_kinh));
+
+
+  // //Bài 3: Viết hàm tính giai thừa của một số nguyên bất kì được đưa vào.
+  // //GỌi hàm vừa xây dựng.
+  // let x = +prompt("Nhập số");
+  // function giaiThua (x) {
+  //   let sum = x;
+  //   for (let i = 1; i < x; i++){
+  //     sum *= (x - i);
+  //   }
+  //   return sum;
+  // }
+  // document.write(giaiThua(x));
+
+
+  // //Bài 4: Viết hàm kiểm tra xem kí tự nhập vào có phải là kí tự số không.
+  // //Nếu là kí tự số hàm trả về true, ngược lại trả về false.
+  // let x = +prompt("Nhập kí tự bất kì");
+  // function checkStringAndNumber(x){
+  //   if (x){
+  //     x = typeof x;
+  //     return true;
+  //   }
+  //   return false;
+  // }
+  // document.write(checkStringAndNumber(x));
+
+
+  // //Bài 5: Viết hàm nhận vào 3 số nguyên bất kì, trả về số nguyên có giá trị nhỏ nhất.
+  // function minArray(arr){
+  //   let min = arr[0];
+  //   for (let i = 1; i < arr.length; i++){
+  //     if (arr[i] < min){
+  //       min = arr[i];
+  //     }
+  //   }
+  //   return min;
+  // }
+  // let arr1 = [3,5,1,8,-3,7,8];
+  // let min = minArray(arr1);
+  // document.write(min);
+
+
+  // //Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.
+  // //Nếu là nguyên dương trả về true, ngược lại trả về false.
+  // let x = +prompt("Nhập số");
+  // function nguyenDuong(x){
+  //   if (x > 0){
+  //     return true;
+  //   }
+  //   return false;
+  // }
+  // document.write(nguyenDuong(x));
+
+
+  // //Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ 2 số nguyên đó.
+  // let a = +prompt("Nhập a");
+  // let b = +prompt("Nhập b");
+  // function number(a,b){
+  //   let num = [a,b];
+  //   return num.reverse();
+  // }
+  // document.write(number(a,b));
+
+
+
+  // //Bài 8: Viết hàm truyền vào mảng số nguyên bất kì, sau đó đảo ngược mảng số nguyên đó.
+  // let arr = window.prompt().split(',',10);
+  // function daoNguoc(arr){
+  //   return arr.reverse();
+  // }
+  // document.write(daoNguoc(arr));
+
+
+  //Bài 9:Viết hàm truyền vào một mảng kí tự, và một kí tự bất kì, kiểm tra xem kí tự đó có
+  //nằm trong mảng không. Nếu có trả về số lần xuất hiện của kí tự đó, nếu không trả về -1.
+  let arr = [4,7,5,9,12,8,6,10];
+  let a = +prompt("Nhập số kiểm tra");
+  let solan = 0;
+  function kiemTra(arr,a){
+    for (let i = 0; i < arr.length; i++){
+      if (arr[i] === a[i]){
+        solan += i;
+      } else if (arr[i] !== a[i]){
+        return -1;
+      }
+    }
+    return solan;
+  }
+  document.write("Số lần xuất hiện là: " + kiemTra(arr,a));
+</script>
