@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  class Apple{
+    constructor(Weight) {
+      this.appleWeigth = Weight;
+    }
+    getApple(){
+      return this.appleWeigth;
+    }
+
+    setApple(Weight){
+      this.appleWeigth = Weight;
+    }
+
+    getWeight(){
+      return this.appleWeigth
+    }
+    isEmpty() {
+      if(this.appleWeigth <= 0){
+        return true;
+      }else {
+        return false;
+      }
+    }
+
+    decreaseApple(){
+      if(this.isEmpty()){
+        alert("Táo đã hết rồi");
+      }else {
+        this.appleWeigth--;
+      }
+    }
+  }
+
+  class Human{
+    constructor(name, gender, weight) {
+      this.name = name;
+      this.gender = gender;
+      this.weight = weight;
+    }
+
+    getName(){
+      return this.name;
+    }
+    getWeight(){
+      return this.weigth
+    }
+    isMale(){
+      if (this.gender == 1){
+        return true
+      } else {
+        return false
+      }
+    }
+    getGender(){
+      if (this.isMale()){
+        return 'Giống Đực'
+      }else {
+        return 'Giống Cái'
+      }
+    }
+
+    say(string){
+      console.log(string)
+    }
+
+    checkApple(apple){
+      return apple.isEmpty()
+    }
+
+    eat(apple){
+      if(apple.getWeight() > 0){
+        apple.decreaseApple();
+        this.weight++;
+      }else {
+        alert("Táo đã hết");
+      }
+    }
+    getInfo(human){
+      alert(human.name + " " +human.weight + " " +human.getGender());
+    }
+  }
+  let adam = new Human('Adam', 1, 75)
+  let eva = new Human('Eva', 2, 50)
+  let apple = new Apple(10)
+  adam.say('Tôi là Adam')
+  eva.say('Tôi là Eva')
+</script>

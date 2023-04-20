@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // //Bài 1: Tạo một class Animal để mô tả đặc điểm chung của các động vật
+    // // và các phương thức như eat(), sleep() và move().
+    // class Animal {
+    //     mau;
+    //     gioitinh;
+    //     cannang;
+    //     constructor(mau, gioitinh, cannang) {
+    //         this.mau = mau;
+    //         this.gioitinh = gioitinh;
+    //         this.cannang = cannang;
+    //     }
+    //     an(){
+    //         alert("Tôi đang ăn");
+    //     }
+    //     ngu(){
+    //         alert("Tôi đã ngủ");
+    //     }
+    //     dichuyen(){
+    //         alert("Tôi đang di chuyển");
+    //     }
+    // }
+    // let dog = new Animal();
+    // dog.dichuyen();
+
+
+    // //Bài 2:Tạo một class Rectangle để tính diện tích
+    // // và chu vi của một hình chữ nhật.
+    // class Rectangle{
+    //     chieurong;
+    //     chieudai;
+    //     constructor(chieurong,chieudai) {
+    //         this.chieudai = chieudai;
+    //         this.chieurong = chieurong;
+    //     }
+    //     chuvi(){
+    //         return (this.chieudai + this.chieurong) * 2;
+    //     }
+    //     dientich(){
+    //         return this.chieudai * this.chieurong;
+    //     }
+    // }
+    // let a = new Rectangle(200,100);
+    // document.write(a.chuvi());
+    // document.write(a.dientich());
+
+
+    // //Bài 3: Tạo một class Circle để tính diện tích và chu vi của một hình tròn.
+    // class Circle{
+    //     bankinh;
+    //     constructor(bankinh) {
+    //         this.bankinh = bankinh;
+    //     }
+    //     dientich(){
+    //         return ((this.bankinh * this.bankinh) * 3.14);
+    //     }
+    //     chuvi(){
+    //         return ((this.bankinh * 2) * 3.14);
+    //     }
+    // }
+    // let a = new Circle(30);
+    // document.write(a.chuvi());
+    // document.write("<br>" + a.dientich());
+
+
+    // //Bài 4:Tạo một class Person để lưu trữ thông tin cá nhân của một người
+    // // như tên, địa chỉ, email, số điện thoại, v.v.
+    // class Person{
+    //     ten;
+    //     diachi;
+    //     email;
+    //     sdt;
+    //     constructor(ten,diachi,email,sdt) {
+    //         this.ten = ten;
+    //         this.diachi = diachi;
+    //         this.email = email;
+    //         this.sdt = sdt;
+    //     }
+    //     tenGoi(){
+    //         alert("Tôi là Dũng");
+    //     }
+    //     noiO(){
+    //         alert("Tôi ở Thanh Hóa");
+    //     }
+    //     lienHe(){
+    //         alert("timnoidau@gmail.com");
+    //     }
+    //     lienLac(){
+    //         alert("0978337006")
+    //     }
+    // }
+    // let thongtin = new Person();
+    // thongtin.tenGoi();
+
+
+    // //Bài 5: Tạo một class Car để mô tả các đặc tính của một chiếc xe như tốc độ,
+    // // mức tiêu thụ nhiên liệu, số chỗ ngồi, v.v.
+    // class Car {
+    //     tocdo;
+    //     tieuthunhienlieu;
+    //     sochongoi;
+    //     mausac;
+    //     constructor(tocdo,tieuthunhienlieu,sochongoi,mausac) {
+    //         this.tocdo = tocdo;
+    //         this.tieuthunhienlieu = tieuthunhienlieu;
+    //         this.sochongoi = sochongoi;
+    //         this.mausac = mausac;
+    //     }
+    //     diChuyen(){
+    //         alert("Tốc độ 100km/h");
+    //     }
+    //     tieuHao(){
+    //         alert("Tiêu thụ nhiên liệu 3L/ 100km");
+    //     }
+    //     kieuXe(){
+    //         alert("Xe có 7 chỗ ngồi");
+    //     }
+    //     mauXe(){
+    //         alert("Xe màu trắng bạc")
+    //     }
+    // }
+
+
+    //Bài 6: Tạo một class Product để lưu trữ thông tin về sản phẩm như tên, giá, mô tả, v.v.
+    class Product {
+        ten;
+        gia;
+        mota;
+        khoiluong
+        constructor(ten,gia,mota,khoiluong) {
+            this.ten = ten;
+            this.gia = gia;
+            this.mota = mota;
+            this.khoiluong = khoiluong;
+        }
+        getSanPham(){
+            return this.ten;
+        }
+        getGiaThanh(){
+            return this.gia;
+        }
+        getMoTa(){
+            return this.mota;
+        }
+        getKhoiLuong(){
+           return this.khoiluong;
+        }
+    }
+    let a = new Product();
+    alert(a.getSanPham())
+
+
+</script>

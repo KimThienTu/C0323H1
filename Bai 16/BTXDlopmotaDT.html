@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Mobile {
+        constructor() {
+            this.battery = 100;
+            this.messageDraft = "";
+            this.inbox = [];
+            this.sent = [];
+            this.isOn = false;
+        }
+        checkBattery() {
+            return this.battery;
+        }
+        checkPhoneStatus() {
+            return this.isOn;
+        }
+        turnOn() {
+            if (!this.isOn) {
+                this.isOn = true;
+                this.battery--;
+                return console.log('BẬT điện thoại');
+            }
+            return console.log('Điện thoại đang trong trạng thái Mở.');
+        }
+        turnOff() {
+            if (this.isOn) {
+                this.isOn = false;
+                this.battery--;
+                return console.log('TẮT điện thoại.');
+            }
+            return console.log('Điện thoại đã được TẮT.');
+        }
+        chargeBattery() {
+            if (this.checkPhoneStatus()) {
+                this.battery = 100;
+                console.log('Điện thoại đang được xạc pin.');
+            } else {
+                console.log('Điện thoại đang đang TẮT không dùng được chức năng này.');
+            }
+        }
+        draftMessage(message) {
+            if (this.checkPhoneStatus()) {
+                this.messageDraft = message;
+                this.battery--;
+                console.log('Đã soạn tin nhắn');
+            } else {
+                console.log('Điện thoại đang đang TẮT không dùng được chức năng này.');
+            }
+        }
+
+        receiveMessage(message) {
+            if (this.checkPhoneStatus()) {
+                this.inbox.push(message) // thực tế không nhận tin nhắn mà push trực tiếp message vào mảng inbox
+                this.battery--;
+                console.log('Đã nhận tin nhắn')
+            } else {
+                console.log('Điện thoại đang đang TẮT không dùng được chức năng này.');
+            }
+        }
+        sendMessage(phone, message) {
+            if (this.checkPhoneStatus()) {
+                if (phone.checkPhoneStatus()) {
+                    phone.receiveMessage(message);
+                    this.sent.push(message);
+                    this.battery--;
+                    console.log('Đã gửi tin nhắn')
+                } else {
+                    console.log('Điện thoại đang đang TẮT không dùng được chức năng này.');
+                }
+            } else {
+                console.log('Điện thoại đang đang TẮT không dùng được chức năng này.');
+            }
+        }
+        viewInbox() {
+            if (this.checkPhoneStatus()) {
+                console.log('Tin nhắn trong hộp thư đến:');
+                console.log(this.inbox);
+                this.battery--;
+            } else {
+                console.log('Điện thoại đang tắt, không thể xem hộp thư đến.');
+            }
+        }
+        viewSent() {
+            if (this.checkPhoneStatus()) {
+                console.log('Tin nhắn đã gửi:');
+                console.log(this.sent);
+                this.battery--;
+            } else {
+                console.log('Điện thoại đang tắt, không thể xem tin đã gửi.');
+            }
+        }
+    }
+    let iphone = new Mobile();
+    let nokia = new Mobile();
+    document.write(iphone.checkBattery());
+</script>

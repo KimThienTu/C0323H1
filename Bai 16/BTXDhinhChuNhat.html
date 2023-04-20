@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+</body>
+</html>
+<script>
+    function Rectangle(height,width){
+        this.height = height;
+        this.width = width;
+
+        this.dienTich = function (){
+            return height * width;
+        }
+        this.chuVi = function (){
+            return (height + width) * 2;
+        }
+        this.getHeight = function (){
+            return this.height;
+        }
+        this.getWidth = function (){
+            return this.width
+        }
+    };
+    let rec = new Rectangle(400,200);
+    let height = rec.getHeight();
+    let width = rec.getWidth();
+    document.write("<br>" + "Dài " + height + "<br>");
+    document.write("Rộng " + width + "<br>");
+    document.write("Diện Tích " + rec.dienTich() + "<br>");
+    document.write("Chu vi " + rec.chuVi());
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    ctx.fillStyle = '#fa4b2a';
+    ctx.fillRect(10,10,width,height);
+</script>
