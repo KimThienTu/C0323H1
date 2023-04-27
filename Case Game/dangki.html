@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form action="" id="register-form">
+  <div class="container">
+    <h1>Form Đăng Ký</h1>
+    <p>Xin hãy nhập biểu mẫu bên dưới để đăng ký.</p>
+    <hr>
+
+    <label><b>Tên đăng nhập</b></label>
+    <input type="text" placeholder="Nhập Tên đăng nhập" id="username" required>
+
+    <label><b>Mật Khẩu</b></label>
+    <input type="password" placeholder="Nhập Mật Khẩu" id="psw" required>
+
+    <label><b>Nhập Lại Mật Khẩu</b></label>
+    <input type="password" placeholder="Nhập Lại Mật Khẩu" id="psw-repeat" required>
+
+    <div class="clearfix">
+      <button onclick="dangKyTK()" type="submit" class="dangky" >Đăng Ký</button>
+    </div>
+  </div>
+</form>
+</body>
+</html>
+<script>
+  function dangKyTK() {
+    let usernameDK = document.getElementById("username").value;
+    let psw1 = document.getElementById("psw").value;
+    let psw2 = document.getElementById("psw-repeat").value;
+    let users1 = JSON.parse(localStorage.getItem("users"));
+    if (users1 == null) {
+      users1 = []
+    }
+
+    let newuser1 = users1.slice();
+    console.log(newuser1)
+    if (usernameDK === '' || psw1 === '' || psw2 === '' || psw1 != psw2) {
+      alert("cần nhập đủ thông tin");
+    } else if (newuser1.some(tenDn => tenDn[0] === usernameDK)) {
+      alert("Tài khoản đã tồn tại");
+    } else {
+      let newUser = [usernameDK, psw1];
+      newuser1.push(newUser);
+      localStorage.setItem("users", JSON.stringify(newuser1)); // lưu trữ newuser1 vào localStorage
+      alert("đăng ký thành công");
+    }
+
+  }
+
+</script>
